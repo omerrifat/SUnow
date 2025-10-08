@@ -45,12 +45,12 @@
             <span id="current">Loading...</span>
             <a onclick="window.nextTimeslot()" href="#">next &gt;&gt;</a>
             <br>
-            <input type="checkbox" onchange="window.enableWrapChanged()" id="wrap" checked>
+            <input type="checkbox" onchange="window.enableWrapChanged()" id="wrap">
             <label for="wrap">Enable text wrapping</label>
         </header>
         <br>
         <div id="list-container">
-            <table id="list">
+            <table id="list" class="nowrap">
             </table>
         </div>
         <script src="main.js"></script>
