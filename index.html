@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SUnow</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            a {
+                color: blue;
+            }
+            body {
+                user-select: none;
+            }
+            table {
+                border:1px solid black;
+                border-collapse: collapse;
+                margin: 0 auto 0 auto;
+                min-width: fit-content;
+                user-select: text;
+            }
+            th {
+                text-align: left;
+            }
+            table tr:nth-child(odd) {
+                background-color: #ddd;
+            }
+            header {
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+            #list-container {
+                display: block;
+                width: 100%;
+                overflow-y: scroll;
+            }
+            .nowrap {
+                white-space: nowrap;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>SUnow - Lectures Right Now</h1>
+            <a onclick="window.prevTimeslot()" href="#">&lt;&lt; prev</a>
+            <span id="current">Loading...</span>
+            <a onclick="window.nextTimeslot()" href="#">next &gt;&gt;</a>
+            <br>
+            <input type="checkbox" onchange="window.enableWrapChanged()" id="wrap" checked>
+            <label for="wrap">Enable text wrapping</label>
+        </header>
+        <br>
+        <div id="list-container">
+            <table id="list">
+            </table>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
