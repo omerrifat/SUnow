@@ -53,7 +53,7 @@ function loadTimeSlot(date) {
         .filter((cls) => cls.where != null && !cls.where.startsWith("Altunizade Campus"))
         .sort((a,b) => (a.code > b.code) ? 1 : -1);
     const elem = document.getElementById("list");
-    elem.innerHTML = "<tr><th style='min-width: 150px'>Code</th><th style='min-width: 150px'>Where</th><th>Name</th></tr>";
+    elem.innerHTML = "<tr><th style='min-width: 120px'>Code</th><th style='min-width: 120px'>Where</th><th>Name</th></tr>";
     for (const cls of classesInHour) {
         const tr = document.createElement("tr");
         let td = document.createElement("td");
