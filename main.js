@@ -29,7 +29,7 @@ function isInTimeSlotSchedule(date, sched) {
     const from = parseTime(sched.time.from);
     const to = parseTime(sched.time.to);
     return (hour > from.h || (hour === from.h && from.m >= 40)) &&
-        (hour < to.h || (hour === to.h && to.m <= 30));
+        (hour < to.h);
 }
 
 function isInTimeSlot(date, cls) {
