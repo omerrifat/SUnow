@@ -101,7 +101,8 @@ function normalizeDate(date) {
 }
 
 async function loadPage() {
-    const res = await fetch("https://omerrifat.github.io/bannerweb-fetch/dist/202501.json");
+    const res = await fetch("https://omerrifat.github.io/bannerweb-fetch/dist/202501.json",
+        { cache: 'no-cache' });
     classes = await res.json();
     const date = normalizeDate(new Date());
     loadTimeSlot(date);
