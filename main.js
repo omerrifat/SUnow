@@ -78,6 +78,10 @@ function loadTimeSlot(date) {
 
 function normalizeDate(date) {
     const newDate = new Date(date);
+    if (newDate.getHours() >= 20) {
+        newDate.setDate(newDate.getDate() + 1);
+        newDate.setHours(8);
+    }
     if (newDate.getDay() === 6) {
         newDate.setDate(newDate.getDate() + 2);
         newDate.setHours(8);
